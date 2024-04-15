@@ -1,0 +1,10 @@
+<h1>Our Static Website</h1>
+<app-header></app-header>
+<a routerLink="/">Home</a> | <a routerLink="/about-us">About us</a> | <a routerLink="/contact-us">Contact us</a> | <a routerLink="/product/7">Product 7</a> | <a routerLink="/axd">Unknown</a>
+<hr/>
+<router-outlet></router-outlet>
+<hr/>
+<button (click)="GotoAboutus()">About Us</button><button (click)="GotoProduct()">Product</button>
+<app-footer></app-footer>
+<hr/>
+<app-message-list></app-message-list>
