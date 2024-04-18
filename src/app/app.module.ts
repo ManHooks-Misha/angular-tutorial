@@ -12,6 +12,8 @@ import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MessageListComponent } from './chat/message-list/message-list.component';
 import { ChatModule } from './chat/chat.module';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { Faren2CeliusPipe } from './faren2-celius.pipe';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ChatModule } from './chat/chat.module';
     AboutUsComponent,
     ContactUsComponent,
     ProductComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EmployeeDetailComponent,
+    Faren2CeliusPipe
   ],
   imports: [
     BrowserModule,
