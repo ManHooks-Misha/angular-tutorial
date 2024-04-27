@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Ang7Routes';
+  fahrenheitValue =77;
+  SelectedEmployeeName="";
 
   ImageURL = "https://th.bing.com/th?id=OIP.ixZ69lPCOZ3ZO5UqSHQGIAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
   Name="Narender"
@@ -32,6 +34,10 @@ GotoProduct(){
   this.router.navigate(["/product","9"]);
 }
 
+SetCurrentEmployee(name){
+  console.log(name)
+  this.SelectedEmployeeName=name
+}
 
 
 

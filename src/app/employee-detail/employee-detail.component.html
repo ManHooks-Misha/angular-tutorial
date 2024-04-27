@@ -1,7 +1,7 @@
 <div>
   <img src="{{imgUrl}}" height="64" width="64"/>
   <h3>Name: {{name}}</h3>
-  <b>Designation: {{designation}}</b> &nbsp; <button>Select Employee</button>
+  <b>Designation: {{designation}}</b> &nbsp; <button (click)="OnEmployeeSelected($event)">Select Employee</button>
   <p>Bio: {{bio}}</p>
 </div>
 

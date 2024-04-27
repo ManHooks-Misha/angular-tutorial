@@ -1,0 +1,6 @@
+<form #postForm="ngForm" (ngSubmit)="addArticle(postForm.value)">
+  UserID: <input type="hidden" name="userId" [(ngModel)]="userId" /><br/>
+  Title: <input type="text" name="title" ngModel/><br/>
+  Bio: <input type="text" name="bio" ngModel/> <br/>
+  <input type="submit" value="Submit"/>
+</form>

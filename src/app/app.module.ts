@@ -14,6 +14,13 @@ import { MessageListComponent } from './chat/message-list/message-list.component
 import { ChatModule } from './chat/chat.module';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { Faren2CeliusPipe } from './faren2-celius.pipe';
+import { TemperatureConverterDirective } from './temperature-converter.directive';
+import { ApilistComponent } from './apilist/apilist.component';
+import { UserdetailComponent } from './userdetail/userdetail.component';
+import { UsersService } from './users.service';
+import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { RegformComponent } from './regform/regform.component';
 
 
 @NgModule({
@@ -27,12 +34,18 @@ import { Faren2CeliusPipe } from './faren2-celius.pipe';
     ProductComponent,
     PageNotFoundComponent,
     EmployeeDetailComponent,
-    Faren2CeliusPipe
+    Faren2CeliusPipe,
+    TemperatureConverterDirective,
+    ApilistComponent,
+    UserdetailComponent,
+    RegformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChatModule
+    ChatModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

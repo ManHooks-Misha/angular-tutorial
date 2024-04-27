@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class Faren2CeliusPipe implements PipeTransform {
 
   transform(value: number): number {
-    return value+5;
+    // Fahrenheit to Celsius conversion: C = (F - 32) * 5/9
+    return ((value - 32) * 5) / 9;
   }
 
 }

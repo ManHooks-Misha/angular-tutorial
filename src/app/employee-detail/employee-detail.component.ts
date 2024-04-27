@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-employee-detail',
@@ -13,9 +13,16 @@ export class EmployeeDetailComponent implements OnInit {
   @Input() designation="NA"
   @Input() bio="NA"
 
+  @Output() SelectedEmployeeChanged = new EventEmitter<String>();
+
   constructor() { }
 
   ngOnInit() {
   }
+  OnEmployeeSelected(curEvent){
+    //console.log(curEvent)
+    this.SelectedEmployeeChanged.emit(this.name);
+  }
+
 
 }
