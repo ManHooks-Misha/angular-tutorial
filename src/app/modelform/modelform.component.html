@@ -1,0 +1,9 @@
+<form [formGroup]="formData" (ngSubmit)="addArticle(formData.value)">
+  <!-- UserID: <input type="hidden" name="userId" [(ngModel)]="userId" /><br/> -->
+  Title: <input type="text" formControlName="title"/><br/>
+  Bio: <input type="text" name="bio" formControlName="bio"/> <br/>
+  <input type="submit" [disabled]="!formData.valid" value="Submit"/>
+</form>
+
+<div *ngIf="!formData.valid else allOk">Please check all fields and try submitting the form</div>
+<ng-template #allOk>Now form is ok you can submit the form</ng-template>

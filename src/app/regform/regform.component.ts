@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
+import { Article } from '../post';
 
 @Component({
   selector: 'app-regform',
@@ -9,14 +10,16 @@ import { UsersService } from '../users.service';
 export class RegformComponent implements OnInit {
   
   userId:number = 1
+  currentPost:Article = new Article();
   
   constructor(private uS:UsersService) { }
 
   ngOnInit() {
   }
 
-  addArticle(data){
-    this.uS.postArticle(data).subscribe( data => console.log(data))
+  addArticle(){
+    this.currentPost.userId=1
+    this.uS.postArticle(this.currentPost).subscribe( data => console.log(data))
   
   }
 

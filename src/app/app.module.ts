@@ -19,8 +19,9 @@ import { ApilistComponent } from './apilist/apilist.component';
 import { UserdetailComponent } from './userdetail/userdetail.component';
 import { UsersService } from './users.service';
 import {HttpClientModule} from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegformComponent } from './regform/regform.component';
+import { ModelformComponent } from './modelform/modelform.component';
 
 
 @NgModule({
@@ -38,14 +39,16 @@ import { RegformComponent } from './regform/regform.component';
     TemperatureConverterDirective,
     ApilistComponent,
     UserdetailComponent,
-    RegformComponent
+    RegformComponent,
+    ModelformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ChatModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

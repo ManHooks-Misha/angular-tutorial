@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
+import { Article } from '../post';
 
 @Component({
   selector: 'app-apilist',
@@ -8,7 +9,7 @@ import { UsersService } from '../users.service';
 })
 export class ApilistComponent implements OnInit {
 
-  usersList =[];
+  usersList:Article[] =[];
   
   constructor(private uS:UsersService) { }
 
